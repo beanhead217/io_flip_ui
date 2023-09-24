@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:gallery/story_scaffold.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
 
+import '../stories.dart';
+
 class GameCardOverlayStory extends StatelessWidget {
   const GameCardOverlayStory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const StoryScaffold(
+    return  StoryScaffold(
       title: 'Game Card Overlay',
       body: Center(
         child: SingleChildScrollView(
@@ -20,7 +22,7 @@ class GameCardOverlayStory extends StatelessWidget {
                   GameCard(
                     size: GameCardSize.sm(),
                     image:
-                        'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2Fdash_3.png?alt=media',
+                        testCharacter,
                     name: 'Dash the Great',
                     description: 'The best Dash in all the Dashland',
                     suitName: 'earth',
@@ -39,7 +41,7 @@ class GameCardOverlayStory extends StatelessWidget {
                   GameCard(
                     size: GameCardSize.sm(),
                     image:
-                        'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2Fdash_3.png?alt=media',
+                        testCharacter,
                     name: 'Dash the Great',
                     description: 'The best Dash in all the Dashland',
                     suitName: 'earth',
@@ -57,7 +59,7 @@ class GameCardOverlayStory extends StatelessWidget {
                   GameCard(
                     size: GameCardSize.sm(),
                     image:
-                        'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2Fdash_3.png?alt=media',
+                        testCharacter,
                     name: 'Dash the Great',
                     description: 'The best Dash in all the Dashland',
                     suitName: 'earth',

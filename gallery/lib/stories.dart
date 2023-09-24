@@ -1,30 +1,70 @@
 import 'package:dashbook/dashbook.dart';
 import 'package:gallery/colors/app_colors_story.dart';
 import 'package:gallery/spacing/app_spacing_story.dart';
+import 'package:gallery/characters/character.dart';
 import 'package:gallery/typography/typography_story.dart';
 import 'package:gallery/widgets/bottom_bar_story.dart';
 import 'package:gallery/widgets/widgets.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
+import 'characters/colors.dart';
 
 final _controller = AnimatedCardController();
 
+var testCharacter = Character(
+  headColor1: gameColors['skinZ2']![0],
+  headColor2: gameColors['skinZ2']![1],
+  eyeColor: gameColors['eyesYellow']![0],
+  hairColor1: gameColors['hairDarkRed']![0],
+  hairColor2: gameColors['hairDarkRed']![1],
+  hairNumber: 17,
+  torsoColor1: gameColors['skinZ2']![0],
+  torsoColor2: gameColors['skinZ2']![1],
+  torsoDecoration: TorsoDecoration.busty,
+  torsoAddOnColor1: gameColors['hairDarkRed']![0],
+  torsoAddOnColor2: gameColors['hairDarkRed']![1],
+  legsColor1: gameColors['hairDarkRed']![0],
+  legsColor2: gameColors['hairDarkRed']![1],
+
+
+);
+
 void addStories(Dashbook dashbook) {
 
-  dashbook.storiesOf('Cards')
-       .add(
-    'Game Card',
-        (context) => GameCardStory(
-      name: context.textProperty('name', 'Dash, the Great'),
-      description: context.textProperty(
-        'description',
-        'Dash, the Great, is the most popular bird in all of the dashland, '
-            'mastering the development skills in all of the possible '
-            'platforms.',
-      ),
-      isRare: context.boolProperty('isRare', false),
-    ),
+
+  dashbook.storiesOf('player').add(
+  'Game Card',
+  (context) => GameCardStory(
+  name: context.textProperty('name', 'Dash, the Great'),
+  description: context.textProperty(
+  'description',
+  'Dash, the Great, is the most popular bird in all of the dashland, '
+  'mastering the development skills in all of the possible '
+  'platforms.',
+  ),
+  isRare: context.boolProperty('isRare', false),
+  ),
   );
 
+  // dashbook.storiesOf('player').add(
+  //   'default',
+  //       (_) =>  Character(
+  //         headColor1: gameColors['skinZ2']![0],
+  //         headColor2: gameColors['skinZ2']![1],
+  //         eyeColor: gameColors['eyesYellow']![0],
+  //         hairColor1: gameColors['hairDarkRed']![0],
+  //         hairColor2: gameColors['hairDarkRed']![1],
+  //         hairNumber: 14,
+  //         torsoColor1: gameColors['skinZ2']![0],
+  //         torsoColor2: gameColors['skinZ2']![1],
+  //         torsoDecoration: TorsoDecoration.busty,
+  //         torsoAddOnColor1: gameColors['hairDarkRed']![0],
+  //         torsoAddOnColor2: gameColors['hairDarkRed']![1],
+  //         legsColor1: gameColors['hairDarkRed']![0],
+  //         legsColor2: gameColors['hairDarkRed']![1],
+  //
+  //
+  //       ),
+  // );
 
   // DELETE ABOVE
   dashbook.storiesOf('AppSpacing').add(

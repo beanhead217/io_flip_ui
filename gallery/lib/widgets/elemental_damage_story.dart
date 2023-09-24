@@ -4,6 +4,8 @@ import 'package:gallery/story_scaffold.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
 import 'package:provider/provider.dart';
 
+import '../stories.dart';
+
 class ElementalDamageStory extends StatefulWidget {
   const ElementalDamageStory(this.element, {super.key});
 
@@ -33,7 +35,7 @@ class _ElementalDamageStoryState extends State<ElementalDamageStory> {
                       left: 0,
                       child: GameCard(
                         image:
-                            'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+                            testCharacter,
                         name: 'Dash the Great',
                         description: 'The best Dash in all the Dashland',
                         suitName: widget.element.name,
@@ -42,12 +44,12 @@ class _ElementalDamageStoryState extends State<ElementalDamageStory> {
                         isRare: false,
                       ),
                     ),
-                    const Positioned(
+                     Positioned(
                       bottom: 0,
                       right: 0,
                       child: GameCard(
                         image:
-                            'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+                            testCharacter,
                         name: 'Dash the Great',
                         description: 'The best Dash in all the Dashland',
                         suitName: 'earth',
@@ -74,12 +76,12 @@ class _ElementalDamageStoryState extends State<ElementalDamageStory> {
                 height: 500,
                 child: Stack(
                   children: [
-                    const Positioned(
+                     Positioned(
                       top: 0,
                       left: 0,
                       child: GameCard(
                         image:
-                            'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+                            testCharacter,
                         name: 'Dash the Great',
                         description: 'The best Dash in all the Dashland',
                         suitName: 'earth',
@@ -93,7 +95,7 @@ class _ElementalDamageStoryState extends State<ElementalDamageStory> {
                       right: 0,
                       child: GameCard(
                         image:
-                            'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+                            testCharacter,
                         name: 'Dash the Great',
                         description: 'The best Dash in all the Dashland',
                         suitName: widget.element.name,

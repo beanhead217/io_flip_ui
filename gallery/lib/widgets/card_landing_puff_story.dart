@@ -4,6 +4,8 @@ import 'package:gallery/story_scaffold.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
 import 'package:provider/provider.dart';
 
+import '../stories.dart';
+
 class CardLandingPuffStory extends StatefulWidget {
   const CardLandingPuffStory({super.key});
 
@@ -33,9 +35,9 @@ class _CardLandingPuffStoryState extends State<CardLandingPuffStory> {
                   ),
                   AnimatedCard(
                     controller: controller,
-                    front: const GameCard(
+                    front:  GameCard(
                       image:
-                          'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+                          testCharacter,
                       name: 'Dash the Great',
                       description: 'The best Dash in all the Dashland',
                       suitName: 'earth',

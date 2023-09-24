@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/story_scaffold.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
 
+import '../stories.dart';
+
 class GameCardStory extends StatelessWidget {
   const GameCardStory({
     required this.name,
@@ -106,7 +108,7 @@ class _GameCardItem extends StatelessWidget {
             builder: (context, tilt) => GameCard(
               tilt: tilt,
               image:
-                  'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2Fdash_3.png?alt=media',
+                  testCharacter,
               name: cardName,
               description: cardDescription,
               suitName: 'earth',

@@ -4,6 +4,8 @@ import 'package:gallery/story_scaffold.dart';
 import 'package:io_flip_ui/io_flip_ui.dart';
 import 'package:provider/provider.dart';
 
+import '../stories.dart';
+
 class AllElementsStory extends StatefulWidget {
   const AllElementsStory({super.key});
 
@@ -62,7 +64,7 @@ class _ElementalDamageGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     final card1 = GameCard(
       image:
-          'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+          testCharacter,
       name: 'Dash the Great',
       description: 'The best Dash in all the Dashland',
       suitName: element.name,
@@ -71,9 +73,9 @@ class _ElementalDamageGroup extends StatelessWidget {
       isRare: false,
     );
 
-    const card2 = GameCard(
+    final card2 = GameCard(
       image:
-          'https://firebasestorage.googleapis.com/v0/b/top-dash-dev.appspot.com/o/public%2FDash_pirate_trumpets_field.png?alt=media',
+          testCharacter,
       name: 'Dash the Great',
       description: 'The best Dash in all the Dashland',
       suitName: 'earth',

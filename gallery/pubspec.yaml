@@ -28,3 +28,50 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/elements/desktop/air/
+    - assets/images/elements/desktop/earth/
+    - assets/images/elements/desktop/fire/
+    - assets/images/elements/desktop/metal/
+    - assets/images/elements/desktop/water/
+    - assets/images/elements/mobile/air/
+    - assets/images/elements/mobile/earth/
+    - assets/images/elements/mobile/fire/
+    - assets/images/elements/mobile/metal/
+    - assets/images/elements/mobile/water/
+    - assets/images/result_badges/
+    - assets/images/suits/onboarding/
+    - assets/images/suits/card/
+    - assets/images/card_frames/
+    - assets/images/card_frames/holos/
+    - assets/images/flip_countdown/mobile/
+    - assets/images/flip_countdown/desktop/
+    - assets/images/characters/eyes/
+    - assets/images/characters/hair/
+    - assets/images/characters/legs/
+    - assets/images/characters/torso/
+    - assets/images/characters/hair/hair1/
+    - assets/images/characters/hair/hair2/
+    - assets/images/characters/hair/hair3/
+    - assets/images/characters/hair/hair4/
+    - assets/images/characters/hair/hair5/
+    - assets/images/characters/hair/hair6/
+    - assets/images/characters/hair/hair7/
+    - assets/images/characters/hair/hair8/
+    - assets/images/characters/hair/hair9/
+    - assets/images/characters/hair/hair10/
+    - assets/images/characters/hair/hair11/
+    - assets/images/characters/hair/hair12/
+    - assets/images/characters/hair/hair13/
+    - assets/images/characters/hair/hair14/
+    - assets/images/characters/hair/hair15/
+    - assets/images/characters/hair/hair16/
+    - assets/images/characters/hair/hair17/
+    - assets/images/characters/hair/hair18/
+    - assets/images/characters/hair/hair19/
+    - assets/images/characters/hair/hair20/
+    - assets/images/characters/hair/hair21/
+    - assets/images/characters/hair/hair22/
+    - assets/images/characters/hair/hair23/

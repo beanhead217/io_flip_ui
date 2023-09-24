@@ -31,7 +31,7 @@ class GameCardSize extends Equatable {
           badgeSize: const Size.square(22),
           powerTextStyle: IoFlipTextStyles.cardNumberXXS,
           powerTextStrokeWidth: 2,
-          imageInset: const RelativeRect.fromLTRB(4, 3, 4, 24),
+          imageInset: const RelativeRect.fromLTRB(4, 0, 4, 24),
         );
 
   /// XS size.
@@ -43,7 +43,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionXS,
           powerTextStyle: IoFlipTextStyles.cardNumberXS,
           powerTextStrokeWidth: 2,
-          imageInset: const RelativeRect.fromLTRB(8, 6, 8, 44),
+          imageInset: const RelativeRect.fromLTRB(8, 0, 8, 44),
         );
 
   /// SM size.
@@ -55,7 +55,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionSM,
           powerTextStyle: IoFlipTextStyles.cardNumberSM,
           powerTextStrokeWidth: 2,
-          imageInset: const RelativeRect.fromLTRB(12, 10, 12, 60),
+          imageInset: const RelativeRect.fromLTRB(12, 0, 12, 60),
         );
 
   /// MD size.
@@ -67,7 +67,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionMD,
           powerTextStyle: IoFlipTextStyles.cardNumberMD,
           powerTextStrokeWidth: 3,
-          imageInset: const RelativeRect.fromLTRB(14, 12, 14, 74),
+          imageInset: const RelativeRect.fromLTRB(14, 0, 14, 74),
         );
 
   /// LG size.
@@ -79,7 +79,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionLG,
           powerTextStyle: IoFlipTextStyles.cardNumberLG,
           powerTextStrokeWidth: 4,
-          imageInset: const RelativeRect.fromLTRB(18, 14, 18, 96),
+          imageInset: const RelativeRect.fromLTRB(18, 0, 18, 96),
         );
 
   /// XL size.
@@ -91,7 +91,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionXL,
           powerTextStyle: IoFlipTextStyles.cardNumberXL,
           powerTextStrokeWidth: 4,
-          imageInset: const RelativeRect.fromLTRB(20, 16, 20, 116),
+          imageInset: const RelativeRect.fromLTRB(20, 0, 20, 116),
         );
 
   /// XXL size.
@@ -103,7 +103,7 @@ class GameCardSize extends Equatable {
           descriptionTextStyle: IoFlipTextStyles.cardDescriptionXXL,
           powerTextStyle: IoFlipTextStyles.cardNumberXXL,
           powerTextStrokeWidth: 4,
-          imageInset: const RelativeRect.fromLTRB(24, 20, 24, 136),
+          imageInset: const RelativeRect.fromLTRB(24, -30, 24, 136),
         );
 
   /// The size of the card.
@@ -204,7 +204,7 @@ class GameCardSize extends Equatable {
 /// {@endtemplate}
 class GameCard extends StatelessWidget {
   /// {@macro game_card}
-  const GameCard({
+   GameCard({
     required this.image,
     required this.name,
     required this.suitName,
@@ -227,7 +227,8 @@ class GameCard extends StatelessWidget {
   final GameCardSize size;
 
   /// Image
-  final String image;
+  // final String image;
+   Widget image;
 
   /// Name
   final String name;
@@ -253,6 +254,7 @@ class GameCard extends StatelessWidget {
 
   /// Used to override the default asset resolution based on the platform.
   final PlatformAwareAsset<bool>? overridePlatformAwareAsset;
+
 
   /// The name of the package from which this widget is included.
   ///
@@ -357,21 +359,27 @@ class GameCard extends StatelessWidget {
       children: [
         Positioned.fromRelativeRect(
           rect: size.imageInset,
-          child: Image.network(
-            image,
-            errorBuilder: (_, __, ___) {
-              return Container(
-                foregroundDecoration: const BoxDecoration(
-                  color: IoFlipColors.seedGrey50,
-                  backgroundBlendMode: BlendMode.saturation,
-                ),
-                decoration: const BoxDecoration(
-                  color: IoFlipColors.seedBlack,
-                ),
-                child: IoFlipLogo(),
-              );
-            },
-          ),
+          child:  Transform.scale(
+            scale: 2.1,
+            child: image,
+            ),
+
+
+    // Image.network(
+    //         image,
+    //         errorBuilder: (_, __, ___) {
+    //           return Container(
+    //             foregroundDecoration: const BoxDecoration(
+    //               color: IoFlipColors.seedGrey50,
+    //               backgroundBlendMode: BlendMode.saturation,
+    //             ),
+    //             decoration: const BoxDecoration(
+    //               color: IoFlipColors.seedBlack,
+    //             ),
+    //             child: IoFlipLogo(),
+    //           );
+    //         },
+    //       ),
         ),
         Positioned.fill(
           child: Image.asset(cardFrame),
@@ -387,7 +395,7 @@ class GameCard extends StatelessWidget {
     );
 
     return Stack(
-      clipBehavior: Clip.none,
+      //clipBehavior: Clip.none,
       children: [
         SizedBox(
           width: size.width,
